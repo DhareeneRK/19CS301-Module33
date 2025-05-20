@@ -1,35 +1,39 @@
 # 19CS301-Module33
-Exp.No:3(a)	STRING- FIND AND REPLACE
+Exp.No:3(a)	STRING- STRING AND REMOVE
 ### AIM
-To write a python function to accept a string, word to be replaced and replace the words of the string, get the new word to be replaced from the user.
+To write a python function that accepts a string and removes the nth index value from the string.
 ### ALGORITHM
-Step 1:	 Begin the program.
+Step 1:	 Start the program.
 
-Step 2:	 Input the original string (str1) and the word to replace (replace_str)
+Step 2:	 Define a function remove(s) that takes a string s as input.
 
-Step 3:	 Ask the user to input the replacement word (str2).
+Step 3:	 Inside the function, initialize an empty string c to store the result.
 
-Step 4:	 Replace all occurrences of replace_str in str1 with str2 using replace() method in Python.
+Step 4:	 Input an integer n (the index of the character to be removed).
 
-Step 5:	 The modified string is stored in str3.
+Step 5:	 Loop through each character in the string using index i from 0 to len(s) - 1:
 
-Step 6:	 Display the original string (str1) to show the user the initial string.
+Step 6:	 If i is not equal to n, append s[i] to the string c.
 
-Step 7:	 Display the modified string (str3) to show the user the string after the replacement.
+Step 7:	 After the loop, print the string c, which now excludes the character at index n.
 
-Step 8:	 Terminate the program.
+Step 8:	 End the function.
 
 ### PROGRAM
-```def replacestr(str1,replace_str):
-    str2=input()
-    str3=str1.replace(replace_str,str2)
-    print(f"The old string is {str1}\nthe new string is {str3}")
+```
+def remove(s):
+    c=""
+    n=int(input())
+    for i in range(len(s)):
+        if i!=n:
+            c=c+s[i]
+    print(c)
 ```
 ### OUTPUT
- ![image](https://github.com/user-attachments/assets/ab789972-0bcc-4de6-a234-f80f5209ed92)
+ ![image](https://github.com/23013357/19CS301-Module33/blob/main/pp.png)
 
 ### RESULT
-Thus the python program of find and replace is implemented and executed successfully.
+Thus the python program of string and remove is implemented and executed successfully.
 
 
 Exp.No:3(b)	REGEX-PATTERN MATCHING USING REGEX
@@ -63,41 +67,46 @@ else:
     print("Not matched!")
 ```
 ### OUTPUT
- ![image](https://github.com/user-attachments/assets/b473b268-4127-4409-9985-e43d47b02847)
+ ![image](https://github.com/23013357/19CS301-Module33/blob/main/aa.png)
 
 ### RESULT
 Thus the python program for pattern matching using regular expression was  implemented and executed successfully.
 
-Exp.No:3(c)	LIST- EVEN NUMBERS LIST
+Exp.No:3(c)	LIST- SUM NUMBERS LIST
 
 ### AIM
-To write a python function that accepts N and to create a list with even numbers up to N.
+To write a python program to display the sum of all the values which are ending with 2 from a list.
 ### ALGORITHM
 
-Step 1:	 Begin the program.
+Step 1:	 Start the program.
 
-Step 2:	 Accept an integer a.
+Step 2:	 Input a list of numbers and store it in the variable numbers.
 
-Step 3:	 Create an empty list l.
+Step 3:	 Initialize a variable sum with 0 to keep track of the total.
 
-Step 4:	In For Loop, Iterate through the numbers from 1 to a-1.For each number i, check if i is even: If i % 2 == 0, append i to the list l.
+Step 4:	 Loop through each number num in the list numbers:
 
-Step 5:	 Print the list l which contains all even numbers from 1 to a-1.
+Step 5:	 If num % 10 == 2 (i.e., the number ends with digit 2), then:
 
-Step 6:	 Terminate the program.
+Step 6:	 Add num to sum.
+
+Step 7:	 After the loop ends, print the final value of sum.
+
+Step 8:	 End the program.
 ### PROGRAM
-```def createlist(a):
-    l=[]
-    for i in range(1,a):
-        if (i%2==0):
-            l.append(i)
-    print(l)
+```
+numbers=eval(input())
+sum=0
+for num in numbers:
+    if num%10==2:
+        sum+=num
+print("Sum=",sum)
 ```
 ### OUTPUT
- ![image](https://github.com/user-attachments/assets/a21369b0-1967-4362-b91f-84bb82becbcd)
+ ![image](https://github.com/23013357/19CS301-Module33/blob/main/ss.png)
 
 ### RESULT
-Thus the python program for printing a list with even numbers up to n, was implemented and executed successfully.
+Thus the python program  display the sum of all the values which are ending with 2 from a list was implemented and executed successfully.
 
 Exp.No:3(d)	TUPLES- A TUPLE WITH MULTIPLES OF 5
 ### AIM
@@ -127,41 +136,38 @@ result = create_tuple(N)
 print(f"{result}")
 ```
 ### OUTPUT
-![image](https://github.com/user-attachments/assets/a16820ca-d669-4520-b141-c4e0a836c910)
+![image](https://github.com/23013357/19CS301-Module33/blob/main/dd.png)
 
 
  
 ### RESULT
 Thus the python program for printing a tuple with numbers that are multiples of 5 up to n, was implemented and executed successfully.
 
-Exp.No:3(e)	SEB- STRING SLICING
+Exp.No:3(e)	SEB- BREAK STRING
 ### AIM
-To write a python function that accepts the string. Form a new string by reversing the characters in the given string from 4 th position to 10  th position with alternate characters and print the new string.
+To write a python  function that accepts the mail id and breaks the string based on "@" using an appropriate built in function.
 ### ALGORITHM
 
-Step 1:	 Begin the program.
+Step 1:	 Start the program.
 
-Step 2:	 Take a slice of input_string starting from index 2 up to index 10.
+Step 2:	 Define a function splitstring(s) that takes a string s as input.
 
-Step 3:	 Reverse the substring.
+Step 3:	 Inside the function, use the split() method to divide the string at every occurrence of the @ symbol.
 
-Step 4:	 slice the reversed string, extracting every second character, starting from the first.
+Step 4:	 Print the list of resulting substrings.
 
-Step 5:	 Print the sliced string in the above step.
+Step 5:	 End the function.
 
-Step 6:	 Terminate the program.
 ### PROGRAM
 ```
-def slice(input_string):
-    substring = input_string[2:10:]
-    reversed_substring = substring[::-1]
-    print(f"The reversed string is '{reversed_substring[::2]}'")
+def splitstring(s):
+    print(s.split("@"))
 ```
 ### OUTPUT
- ![image](https://github.com/user-attachments/assets/1c3e5d33-4525-44e9-93c4-3431af135a04)
+ ![image](https://github.com/23013357/19CS301-Module33/blob/main/FF.png)
 
 ### RESULT
-Thus the python function that accepts the string. Form a new string by reversing the characters in the given string from 4 th position to 10  th position with alternate characters and print the new string was implemented and executed successfully.
+Thus the python  function that accepts the mail id and breaks the string based on "@" using an appropriate built in function was implemented and executed successfully.
 
 
 
